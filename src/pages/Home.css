@@ -1,0 +1,99 @@
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 5%;
+  background-color: #ffdb67;
+}
+
+.home-text {
+  flex: 1;
+  color: #333;
+  text-align: left;
+}
+
+.home-text h1 {
+  font-size: 3rem;
+  color: #ff9f43;
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+}
+
+.big-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 3rem;
+  font-family: "Libre Baskerville", serif;
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 8s linear infinite;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  background: linear-gradient(90deg, #ff9f43, #ff6f91, #6a82fb, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Libre Baskerville", serif;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.home-text h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #333;
+  font-family: "Libre Baskerville", serif;
+}
+
+.button-container {
+  margin-top: 30px;
+}
+
+.view-cv-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff6f91;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  font-family: "Libre Baskerville", serif;
+}
+
+.view-cv-button:hover {
+  background-color: #ff9f43;
+  transform: scale(1.1);
+}
+
+.home-icon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image {
+  width: 300px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  object-fit: cover; /* Ensures the image covers the circle without distortion */
+  border-radius: 50%; /* Makes the image circular */
+  overflow: hidden; /* Ensures the image content doesn't overflow the circle */
+  border: 5px solid #fff; /* Optional: Add a border for emphasis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for depth */
+}
+

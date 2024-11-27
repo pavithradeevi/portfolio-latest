@@ -1,0 +1,288 @@
+/* About Container */
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffdb67;
+    font-family: 'Libre Baskerville', serif;
+    padding: 1px;
+    box-sizing: border-box;
+    margin-top: -20px; /* Move the whole container a bit up */
+  }
+  
+  /* Top Heading */
+  .skill-heading {
+    font-size: 50px;
+    color: rgba(18, 17, 17, 0.2);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Main Content Section: Two Columns */
+  .main-content {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    align-items: flex-start;
+    margin-top: 40px; /* Add some spacing at the top */
+  }
+  
+  /* Left Section: About Section */
+  .skill-section {
+    flex: 7; /* Takes up 70% width */
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    color: #333;
+    box-sizing: border-box;
+    margin-top: -30px; /* Move left section slightly upwards */
+  }
+
+  
+  /* Top Section */
+  .top-section {
+    margin-bottom: 20px;
+  }
+  
+  .line-container {
+    display: flex; /* Arrange line and text side-by-side */
+    align-items: center; /* Vertically align the line and text */
+    margin-bottom: 20px;
+  }
+  
+  .vertical-line {
+    width: 3px; /* Thickness of the line */
+    height: 120px; /* Height of the line */
+    background-color: #ff9f43; /* Line color */
+    margin-right: 15px; /* Space between line and text */
+  }
+  
+  .line-texts {
+    display: flex;
+    flex-direction: column; /* Stack text elements vertically */
+  }
+  
+  .top-phrase {
+    font-size: 20px;
+    color: #ff9f43;
+    font-weight: bold;
+   margin-top: 1px;
+   margin-bottom: 2px;
+    /* position: relative; */
+  }
+  
+  .know-more {
+    font-size: 40px;
+    color: #060606;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    
+  }
+  .know-mores {
+    font-size: 30px;
+    color: #060606;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    
+  }
+
+  .top-phrases {
+    font-size: 15px;
+    color: #ff9f43;
+    font-weight: bold;
+   margin-top: 1px;
+   margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .detailed-text {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 40px;
+    text-align: justify;
+  }
+  
+  /* Contact Info Section */
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .contact-item {
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-item p {
+    margin: 5px 0;
+  }
+  
+  .contact-item strong {
+    font-weight: bold;
+  }
+  
+  .styled-heading {
+    font-family: 'Merriweather', serif; /* Elegant and professional font */
+    font-size: 2.8rem; /* Large enough to stand out */
+    font-weight: 600; /* Semi-bold for a strong presence */
+    color: #333; /* Professional dark color */
+    letter-spacing: 0.5px; /* Subtle letter spacing for clarity */
+    line-height: 1.4; /* Comfortable line height */
+    text-align: left; /* Professional left alignment */
+    margin: 20px 0; /* Balanced spacing */
+  }
+  /* Skills List */
+.skills-list {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  /* Skill Item */
+  .skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  /* Skill Name (Left Section) */
+  .skill-name {
+    width: 30%; /* Fixed width for skill name */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #060606;
+    text-align: left;
+  }
+  
+  /* Progress Bar Container (Right Section) */
+  .progress-bar {
+    width: 60%; /* Reserve 60% for the bar */
+    background-color: #e6e6e6; /* Subtle background for empty bar */
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animated Progress Fill */
+  .progress {
+    background: repeating-linear-gradient(
+      45deg,
+      #ff9f43,
+      #ff9f43 10px,
+      #f39c12 10px,
+      #f39c12 20px
+    ); /* Striped effect */
+    height: 100%;
+    width: 0; /* Start at 0 for animation */
+    border-radius: 10px;
+    position: relative;
+    animation: fill-animation 1.8s ease-in-out forwards, stripe-animation 1.5s linear infinite;
+  }
+  
+  /* Keyframes for Progress Animation */
+  @keyframes fill-animation {
+    from {
+      width: 0;
+    }
+    to {
+      width: var(--progress-width); /* Dynamically set in JS */
+    }
+  }
+  
+  /* Keyframes for Striped Animation */
+  @keyframes stripe-animation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px; /* Move stripes diagonally */
+    }
+  }
+  
+  /* Percentage Text (Outside) */
+  .percentage-text {
+    margin-left: 15px; /* Space from the progress bar */
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    width: 10%; /* Reserve 10% for percentage */
+    text-align: left;
+  }
+  /* Circle Container Styles */
+.circle-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 1px;
+}
+
+.circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+}
+
+.circle svg circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.circle svg circle:first-child {
+    stroke: #eee;
+}
+
+.circle svg circle:last-child {
+    stroke: #00bcd4;
+    stroke-dasharray: 440; /* Circumference of the circle */
+    stroke-dashoffset: 440; /* Will be dynamically updated */
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.circle-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.circle-text {
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hover Effect */
+.circle:hover svg circle:last-child {
+    stroke: #ff9f43; /* Change color on hover */
+}

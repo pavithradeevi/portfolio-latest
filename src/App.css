@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffdb67; /* Unified background color */
+  color: #333;
+  height: 100%;
+  overflow-x: hidden; /* Remove horizontal scrollbar */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  display: flex; 
+  /* overflow-x: hidden;  */
+  overflow-x: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-area {
+  width: 80%; /* Content area takes up 80% of the container width */
+  padding: 20px;
+  overflow-y: auto; /* Vertical scrolling allowed for content if necessary */
   display: flex;
   flex-direction: column;
+  height: 100%; /* Ensures the content area fits vertically within the viewport */
+}
+
+.side-nav {
+  width: 20%; /* Sidebar takes up 20% of the container width */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: fixed; /* Fixed position on the right side */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffdb67; /* Ensures sidebar matches background */
+  z-index: 1000; /* Keeps the sidebar above content */
 }
 
-.App-link {
-  color: #61dafb;
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 60px; /* Adjust top margin to create space from top */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.side-nav ul li {
+  margin: 20px 0;
+}
+
+.side-nav ul li a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.side-nav ul li a:hover {
+  color: #333;
+  transform: scale(1.1);
+}
+
+section {
+  padding: 40px 20px;
+  margin-bottom: 40px;
+  background-color: #ffdb67;
+}
+
+.hero {
+  color: #333;
+  padding: 60px 20px;
+  text-align: center;
 }

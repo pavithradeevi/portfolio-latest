@@ -1,0 +1,254 @@
+.experience-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffdb67;
+    font-family: 'Libre Baskerville', serif;
+    padding: 1px;
+    box-sizing: border-box;
+    margin-top: -20px; /* Move the whole container a bit up */
+}
+
+.experience-heading{
+    font-size: 50px;
+    color: rgba(18, 17, 17, 0.2);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    align-items: flex-start;
+    margin-top: 40px; /* Add some spacing at the top */
+  }
+
+.experience-section{
+    flex: 7; /* Takes up 70% width */
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    color: #333;
+    box-sizing: border-box;
+    margin-top: -30px; 
+}
+
+.top-section {
+    margin-bottom: 20px;
+  }
+  
+  .line-container {
+    display: flex; /* Arrange line and text side-by-side */
+    align-items: center; /* Vertically align the line and text */
+    margin-bottom: 20px;
+  }
+  
+  .vertical-line {
+    width: 3px; /* Thickness of the line */
+    height: 120px; /* Height of the line */
+    background-color: #ff9f43; /* Line color */
+    margin-right: 15px; /* Space between line and text */
+  }
+  
+  .line-texts {
+    display: flex;
+    flex-direction: column; /* Stack text elements vertically */
+  }
+  
+  .top-phrase {
+    font-size: 20px;
+    color: #ff9f43;
+    font-weight: bold;
+   margin-top: 1px;
+   margin-bottom: 2px;
+    /* position: relative; */
+  }
+  
+  .know-more {
+    font-size: 40px;
+    color: #060606;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    
+  }
+
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.experience-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Libre Baskerville', serif;
+    color: #333;
+}
+
+.experience-duration {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff9f43;
+}
+
+.experience-role {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+}
+
+.experience-company {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+}
+
+.experience-description {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #666;
+}
+/* Experience Container */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Libre Baskerville', serif;
+    background-color: #ffdb67;
+    padding: 20px;
+}
+
+
+
+.main-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Experience Section */
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    position: relative;
+}
+
+.about-text {
+    margin-bottom: 20px;
+}
+
+.top-section .line-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.vertical-line {
+    width: 3px;
+    height: 120px;
+    background-color: #ff9f43;
+    margin-right: 10px;
+}
+
+.line-texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-phrase {
+    font-size: 20px;
+    color: #ff9f43;
+    font-weight: bold;
+}
+
+.know-more {
+    font-size: 40px;
+    color: #060606;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Experience List */
+.experience-list {
+    display: flex;
+    position: relative;
+}
+
+.sidebar-line {
+    position: absolute;
+    left: -40px; /* Adjust sidebar placement */
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: rgba(0, 0, 0, 0.1); /* Default line color */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.sidebar-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-indicator.active {
+    background-color: #ff9f43;
+    transform: scale(1.5);
+}
+
+/* Experience Items */
+.experience-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.experience-item {
+    background-color: #ffdb67;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.experience-duration {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff9f43;
+}
+
+.experience-role {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+}
+
+.experience-company {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+}
+
+.experience-description {
+    font-size: 16px;
+    color: #666;
+}

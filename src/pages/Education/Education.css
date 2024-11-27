@@ -1,0 +1,136 @@
+/* Education Container */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffdb67;
+  font-family: 'Libre Baskerville', serif;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+  margin-top: -30px;
+}
+
+/* Heading */
+.education-heading {
+  font-size: 50px;
+  color: rgba(18, 17, 17, 0.2);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Content Section */
+.education-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.educationline-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.educationvertical-line {
+  width: 3px;
+  height: 120px;
+  background-color: #ff9f43;
+  margin-right: 15px;
+}
+
+.educationline-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.educationtop-phrase {
+  font-size: 20px;
+  color: #ff9f43;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.educationknow-more {
+  font-size: 40px;
+  color: #060606;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.education-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* 3D Flipping Box */
+.education-box {
+  perspective: 1000px; /* Perspective for 3D effect */
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.education-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Front and Back of the Box */
+.education-box-front,
+.education-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the backside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.education-box-front {
+  background-color: #fff;
+  color: #ff9f43;
+}
+
+.education-box-back {
+  background-color: #ff9f43;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* Rotate on Flip */
+.education-box.flipped .education-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Box Title and Subtitle */
+.education-box-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px; /* Adds space below the title */
+  line-height: 1.4; /* Adjust line height for better readability */
+}
+
+.education-box-subtitle {
+  font-size: 16px;
+  text-align: center; /* Center aligns the subtitle */
+  color: #6d6d6d; /* Optional: Change subtitle color for better differentiation */
+  margin-top: 0; /* Ensures consistent spacing */
+}
+

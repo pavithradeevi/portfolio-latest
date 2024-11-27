@@ -1,0 +1,188 @@
+/* About Container */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffdb67;
+  font-family: 'Libre Baskerville', serif;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+  margin-top: -30px; /* Move the whole container a bit up */
+}
+
+/* Top Heading */
+.about-heading {
+  font-size: 50px;
+  color: rgba(18, 17, 17, 0.2);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Main Content Section: Two Columns */
+.main-content {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  align-items: flex-start;
+  margin-top: 40px; /* Add some spacing at the top */
+}
+
+/* Left Section: About Section */
+.about-section {
+  flex: 7; /* Takes up 70% width */
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  color: #333;
+  box-sizing: border-box;
+  margin-top: -30px; /* Move left section slightly upwards */
+}
+
+/* Right Section: Images Section */
+.images-section {
+  flex: 3; /* Takes up 30% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Experience Box */
+.experience-box {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  color: #161515;
+  font-family: Arial, sans-serif;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pulsating Glow and Scale Effect during Drag */
+.experience-box.dragging {
+  animation: drag-animation 1.5s infinite alternate;
+}
+
+/* Keyframes for Drag Animation */
+@keyframes drag-animation {
+  0% {
+    transform: scale(1);
+    border-color: #f39c12;
+    box-shadow: 0 0 20px rgba(243, 156, 18, 0.8);
+    background-color: #222;
+  }
+  50% {
+    transform: scale(1.1);
+    border-color: #e74c3c;
+    box-shadow: 0 0 30px rgba(231, 76, 60, 0.8);
+    background-color: #333;
+  }
+  100% {
+    transform: scale(1.2);
+    border-color: #9b59b6;
+    box-shadow: 0 0 40px rgba(155, 89, 182, 0.8);
+    background-color: #444;
+  }
+}
+
+/* Hover Effect for Experience Box */
+.experience-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.experience-box:active {
+  cursor: grabbing;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Top Section */
+.top-section {
+  margin-bottom: 20px;
+}
+
+.line-container {
+  display: flex; /* Arrange line and text side-by-side */
+  align-items: center; /* Vertically align the line and text */
+  margin-bottom: 20px;
+}
+
+.vertical-line {
+  width: 3px; /* Thickness of the line */
+  height: 120px; /* Height of the line */
+  background-color: #ff9f43; /* Line color */
+  margin-right: 15px; /* Space between line and text */
+}
+
+.line-texts {
+  display: flex;
+  flex-direction: column; /* Stack text elements vertically */
+}
+
+.top-phrase {
+  font-size: 20px;
+  color: #ff9f43;
+  font-weight: bold;
+  margin-bottom: 5px; /* Adjust spacing below this text */
+  position: relative;
+}
+
+.know-more {
+  font-size: 40px;
+  color: #060606;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 10px;
+}
+
+.detailed-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 40px;
+  text-align: justify;
+}
+
+/* Contact Info Section */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.contact-item {
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item p {
+  margin: 5px 0;
+}
+
+.contact-item strong {
+  font-weight: bold;
+}
+
+.styled-heading {
+  font-family: 'Merriweather', serif; /* Elegant and professional font */
+  font-size: 2.8rem; /* Large enough to stand out */
+  font-weight: 600; /* Semi-bold for a strong presence */
+  color: #333; /* Professional dark color */
+  letter-spacing: 0.5px; /* Subtle letter spacing for clarity */
+  line-height: 1.4; /* Comfortable line height */
+  text-align: left; /* Professional left alignment */
+  margin: 20px 0; /* Balanced spacing */
+}
