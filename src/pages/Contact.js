@@ -1,14 +1,9 @@
 import React from 'react';
-import { useSpring, animated } from 'react-spring';
+import { useSpring } from 'react-spring';
 import './Contact.css';
 
 const Contact = () => {
-  const fadeInUp = useSpring({
-    opacity: 1,
-    transform: 'translateY(0)',
-    from: { opacity: 0, transform: 'translateY(50px)' },
-    delay: 500,
-  });
+
 
   return (
     <div className="contact-container">
