@@ -11,6 +11,7 @@ import Work from './pages/Work/Work';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false); // State for menu visibility
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +36,8 @@ const App = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <div className="App">
@@ -68,31 +71,34 @@ const App = () => {
         </div>
 
         {/* Sidebar Navigation */}
-        <div className="side-nav">
+        <div className={`side-nav ${menuOpen ? "open" : ""}`}>
+          <div className="menu-icon" onClick={toggleMenu}>
+            ☰ {/* Hamburger menu icon */}
+          </div>
           <ul>
             <li className={activeSection === "home" ? "active" : ""}>
-              <a href="#home">TOP</a>
+              <a href="#home" onClick={toggleMenu}>TOP</a>
             </li>
             <li className={activeSection === "about" ? "active" : ""}>
-              <a href="#about">ABOUT ME</a>
+              <a href="#about" onClick={toggleMenu}>ABOUT ME</a>
             </li>
             <li className={activeSection === "skills" ? "active" : ""}>
-              <a href="#skills">SKILLS</a>
+              <a href="#skills" onClick={toggleMenu}>SKILLS</a>
             </li>
             <li className={activeSection === "experience" ? "active" : ""}>
-              <a href="#experience">EXPERIENCES</a>
+              <a href="#experience" onClick={toggleMenu}>EXPERIENCES</a>
             </li>
             <li className={activeSection === "projects" ? "active" : ""}>
-              <a href="#projects">PROJECTS</a>
+              <a href="#projects" onClick={toggleMenu}>PROJECTS</a>
             </li>
             <li className={activeSection === "education" ? "active" : ""}>
-              <a href="#education">EDUCATION</a>
+              <a href="#education" onClick={toggleMenu}>EDUCATION</a>
             </li>
             <li className={activeSection === "work" ? "active" : ""}>
-              <a href="#work">HOW I WORK</a>
+              <a href="#work" onClick={toggleMenu}>HOW I WORK</a>
             </li>
             <li className={activeSection === "contact" ? "active" : ""}>
-              <a href="#contact">CONTACT</a>
+              <a href="#contact" onClick={toggleMenu}>CONTACT</a>
             </li>
           </ul>
         </div>

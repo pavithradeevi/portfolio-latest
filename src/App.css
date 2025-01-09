@@ -1,3 +1,4 @@
+/* General Styles */
 * {
   box-sizing: border-box;
 }
@@ -13,8 +14,7 @@ body, html {
 }
 
 .container {
-  display: flex; 
-  /* overflow-x: hidden;  */
+  display: flex;
   overflow-x: auto;
 }
 
@@ -27,18 +27,20 @@ body, html {
   height: 100%; /* Ensures the content area fits vertically within the viewport */
 }
 
+/* Sidebar Navigation */
 .side-nav {
   width: 20%; /* Sidebar takes up 20% of the container width */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   position: fixed; /* Fixed position on the right side */
   top: 0;
   right: 0;
   bottom: 0;
   background-color: #ffdb67; /* Ensures sidebar matches background */
   z-index: 1000; /* Keeps the sidebar above content */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: transform 0.3s ease-in-out; /* Animation for showing/hiding */
 }
 
 .side-nav ul {
@@ -64,6 +66,7 @@ body, html {
   transform: scale(1.1);
 }
 
+/* Sections */
 section {
   padding: 40px 20px;
   margin-bottom: 40px;
@@ -74,4 +77,53 @@ section {
   color: #333;
   padding: 60px 20px;
   text-align: center;
+}
+
+.menu-icon {
+  display: none; /* Hidden by default */
+  font-size: 2rem;
+  color: #4a90e2;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1100;
+}
+
+
+
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .content-area {
+    width: 100%; /* Full width for content on mobile */
+    padding: 10px;
+  }
+
+  .side-nav {
+    width: 100%; /* Full width for navigation on mobile */
+    height: 100%; /* Full height for overlay effect */
+    transform: translateX(100%); /* Hidden by default */
+    position: fixed;
+  }
+
+  .side-nav.open {
+    transform: translateX(0); /* Slide in when open */
+  }
+
+  .side-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .side-nav ul li {
+    margin: 15px 0;
+  }
+
+  .menu-icon {
+    display: block; /* Show hamburger icon */
+  }
 }
