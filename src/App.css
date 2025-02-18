@@ -79,6 +79,7 @@ section {
   text-align: center;
 }
 
+/* Default: Hidden for large screens */
 .menu-icon {
   display: none; /* Hidden by default */
   font-size: 2rem;

@@ -5,12 +5,30 @@
   height: 100vh;
   padding: 0 5%;
   background-color: #ffdb67;
+  flex-direction: row; /* Default layout */
 }
 
+/* Mobile View */
+@media (max-width: 768px) {
+  .home-section {
+    flex-direction: column; /* Stack elements for mobile */
+    text-align: center;
+    justify-content: center;
+    padding: 5%;
+  }
+}
+
+/* Text Section */
 .home-text {
   flex: 1;
   color: #333;
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  .home-text {
+    text-align: center; /* Center text on mobile */
+  }
 }
 
 .home-text h1 {
@@ -20,6 +38,13 @@
   font-family: "Libre Baskerville", serif;
 }
 
+@media (max-width: 768px) {
+  .home-text h1 {
+    font-size: 2.5rem; /* Slightly smaller for mobile */
+  }
+}
+
+/* Scrolling Text */
 .big-text {
   font-size: 2.5rem;
   font-weight: bold;
@@ -51,6 +76,7 @@
   }
 }
 
+/* Third Line */
 .home-text h3 {
   font-size: 1.5rem;
   margin-top: 20px;
@@ -58,6 +84,13 @@
   font-family: "Libre Baskerville", serif;
 }
 
+@media (max-width: 768px) {
+  .home-text h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* View CV Button */
 .button-container {
   margin-top: 30px;
 }
@@ -80,6 +113,7 @@
   transform: scale(1.1);
 }
 
+/* Image Section */
 .home-icon {
   flex: 1;
   display: flex;
@@ -87,13 +121,25 @@
   align-items: center;
 }
 
-.home-image {
-  width: 300px; /* Fixed width */
-  height: 400px; /* Fixed height */
-  object-fit: cover; /* Ensures the image covers the circle without distortion */
-  border-radius: 50%; /* Makes the image circular */
-  overflow: hidden; /* Ensures the image content doesn't overflow the circle */
-  border: 5px solid #fff; /* Optional: Add a border for emphasis */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for depth */
+@media (max-width: 768px) {
+  .home-icon {
+    margin-top: 30px; /* Add space between text and image */
+  }
 }
 
+.home-image {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .home-image {
+    width: 250px;
+    height: 250px; /* Smaller image for mobile */
+  }
+}
