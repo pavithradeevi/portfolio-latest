@@ -36,7 +36,7 @@ const Contact = () => {
                   <div className="icon-circle">
                     <i className="fas fa-map-marker-alt"></i>
                   </div>
-                  <p>151/74, Jablonskeho, Olomouc-77900</p>
+                  <p>378/8,Krokovska, Olomouc-77900</p>
                 </div>
                 <div className="social-icons">
     <a
