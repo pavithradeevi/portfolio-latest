@@ -45,7 +45,7 @@ const Home = () => {
         <div className="button-container">
   <button
     className="view-cv-button"
-    onClick={() => window.open("https://drive.google.com/file/d/1AZliaNl8TcNb0M95sqt_GuI7U0VUGn0d/view?usp=sharing", "_blank")}
+    onClick={() => window.open("https://drive.google.com/file/d/1zcDGnRhXL23YzpYTJbcZ7Ld7HGOOqLZ0/view?usp=sharing", "_blank")}
   >
     View CV
   </button>
