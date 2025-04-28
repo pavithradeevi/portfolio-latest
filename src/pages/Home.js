@@ -42,14 +42,23 @@ const Home = () => {
         <h3>{displayText3}</h3>
 
         {/* View CV Button */}
-        <div className="button-container">
+        <div className="button-container" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
   <button
     className="view-cv-button"
     onClick={() => window.open("https://drive.google.com/file/d/1zcDGnRhXL23YzpYTJbcZ7Ld7HGOOqLZ0/view?usp=sharing", "_blank")}
   >
     View CV
   </button>
+
+  <a href="https://github.com/pavithradeevi" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style={{ width: '32px', height: '32px' }} />
+  </a>
+
+  <a href="https://www.linkedin.com/in/pavithra-v-148533263/" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style={{ width: '32px', height: '32px' }} />
+  </a>
 </div>
+
 
       </div>
 

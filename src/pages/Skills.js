@@ -6,7 +6,9 @@ const Skills = () => {
         { name: 'React.js', percentage: 90 },
         { name: 'React Native', percentage: 90 },
         { name: 'SQL', percentage: 75 },
+        { name: 'MongoDB', percentage: 75 },
         { name: 'JavaScript', percentage: 85 },
+        { name: 'TypeScript', percentage: 70 },
         { name: 'HTML/CSS', percentage: 80 },
         { name: 'Redux', percentage: 70 },
         { name: 'Node.js', percentage: 70 },
@@ -16,7 +18,7 @@ const Skills = () => {
     const circleSkills = [
         { name: 'Frontend', percentage: 89 },
         { name: 'Backend', percentage: 65 },
-        { name: 'Mobile Apps', percentage: 82 },
+        { name: 'Mobile Applications', percentage: 82 },
         { name: 'Websites', percentage: 75 },
     ];
 
