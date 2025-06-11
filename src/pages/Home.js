@@ -45,7 +45,7 @@ const Home = () => {
         <div className="button-container" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
   <button
     className="view-cv-button"
-    onClick={() => window.open("https://drive.google.com/file/d/1zcDGnRhXL23YzpYTJbcZ7Ld7HGOOqLZ0/view?usp=sharing", "_blank")}
+    onClick={() => window.open("https://drive.google.com/file/d/1peH2nRq1s0XDZk6ouj6eHrWXMMHoBe2g/view?usp=sharing", "_blank")}
   >
     View CV
   </button>
